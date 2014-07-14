@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1395146194 source:d:\³ÌÐò\117\main.cpp
+	<stdio.h>
+
+1399091903 source:d:\³ÌÐò\nyoj\117\main.cpp
+	<stdio.h>
+	<algorithm>
+
