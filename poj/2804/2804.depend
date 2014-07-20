@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1405774396 source:d:\project\poj\2804\main.cpp
+	<cstdio>
+	<cstring>
+
