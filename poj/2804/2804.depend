@@ -1,5 +1,13 @@
 # depslib dependency file v1.0
-1405774396 source:d:\project\poj\2804\main.cpp
-	<cstdio>
+1405933574 source:d:\project\poj\2804\main.cpp
 	<cstring>
+	<cstdlib>
+	<cstring>
+	<cstdlib>
+	<algorithm>
+	"stdio.h"
+	"string.h"
+	"math.h"
+	"algorithm"
+	"iostream"
 
