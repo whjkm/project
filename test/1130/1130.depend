@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1407499798 source:d:\project\test\1130\main.cpp
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<climits>
+	<algorithm>
+	<queue>
+	<iostream>
+	<cstring>
+	<cmath>
+	<cstdio>
+
