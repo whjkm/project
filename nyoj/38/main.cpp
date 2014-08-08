@@ -1,59 +1,61 @@
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
 using namespace std;
-#define INF 0xfffffff
-#define MAXN 505
-int v,e,ant;
-int map[MAXN][MAXN];
-int lowcost[MAXN];
-int adjvex[MAXN];
-void prim()
+const int MAX=0x3f3f3f3f;
+const int maxn=500+20;
+int map[maxn][maxn],visit[maxn],low[maxn];
+int v,e;
+int prim()
 {
-    int i,j,min,k;
-    for(i=2;i<=v;i++)
-    lowcost[i]=map[0][i];
-    for(i=2;i<=v;i++)
-    {
-        min=INF;
-        for(j=1;j<=v;j++)
-        {
-            if(lowcost[j]!=0&&lowcost[j]<min)
-            {
-                min=lowcost[j];
-                k=j;
-            }
-        }
-        lowcost[k]=0;
-        ant+=min;
-        for(j=1;i<=v;i++)
-        {
-            if(lowcost[j]&&map[k][j]<lowcost[j])
-            lowcost[j]=map[k][j];
-        }
-    }
+   int pos,i,j,min,sum=0;
+   memset(visit,0,sizeof(visit));//初始化visit数组
+   visit[1]=1;//从第一个点开始
+   pos=1;//标记和记录这个点
+   for(i=1;i<=v;i++)
+      low[i]=map[pos][i];//用low数组记录权值
+   for(i=1;i<v;i++) //第一个点已经进行了，还需要进行n-1次；
+   {
+       min=MAX;//把min赋初值
+       for(j=1;j<=v;j++)
+       {
+           if(visit[j]==0&&low[j]!=0&&low[j]<min)//比较权值的大小
+           {
+               min=low[j];
+               pos=j;//记录权值最小的点，下一次从这个点开始
+           }
+       }
+       sum+=min;//记录权值的和
+       visit[pos]=1;//标记访问
+       for(j=1;j<=v;j++)//访问下一个点
+       {
+           if(visit[j]==0&&low[j]>map[pos][j])
+              low[j]=map[pos][j];
+       }
+   }
+   return sum;
 }
 int main()
 {
-    int n,a,b,c,i;
+    int n,a,b,c,i,j;
+    int r[maxn];
     scanf("%d",&n);
     while(n--)
     {
-        ant=0;
-        memset(adjvex,0,sizeof(adjvex));
-        memset(map,0,sizeof(map));
-        memset(lowcost,0,sizeof(lowcost));
         scanf("%d%d",&v,&e);
-        for(i=1;i<=e;i++)
-            {
-                scanf("%d%d%d",&a,&b,&c);
-                map[a][b]=map[b][a]=c;
-            }
         for(i=1;i<=v;i++)
-            scanf("%d",&adjvex[i]);
-        sort(adjvex+1,adjvex+v+1);
-        prim();
-        printf("%d\n",ant+adjvex[1]);
+          for(j=1;j<=i;j++)
+            map[i][j]=map[j][i]=MAX;
+        //memset(map,0,sizeof(map));
+        for(i=1;i<=e;i++)
+        {
+            scanf("%d%d%d",&a,&b,&c);
+            map[a][b]=map[b][a]=c;
+        }
+        for(j=1;j<=v;j++)
+            scanf("%d",&r[j]);
+        sort(r+1,r+v+1);
+        printf("%d\n",prim()+r[1]);
     }
     return 0;
 }
