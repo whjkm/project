@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1407761919 source:d:\project\nyoj\19\main.cpp
+	<cstring>
+	<algorithm>
+	<cstring>
+	<iostream>
+	<cstring>
+	<algorithm>
+
