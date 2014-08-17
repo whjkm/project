@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1407639934 source:d:\project\test\115\main.cpp
+	<stdio.h>
+	<algorithm>
+	<cstdio>
+	<cstring>
+	<queue>
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<queue>
+	<map>
+	<set>
+	<math.h>
+	<algorithm>
+
