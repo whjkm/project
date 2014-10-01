@@ -1,97 +1,39 @@
-/*#include <stdio.h>
-int a[1000002],temp[1000002];
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+const int maxn=1000001;
+int a[maxn],b[maxn];
 long long sum;
-void mergearray(int a[],int first,int mid,int last,int temp[])
+void Merge(int begin,int mid,int end)
 {
-    int i=first,j=mid+1;
-    int m=mid,n=last;
-    int k=0,s=mid-first+1;
-    while(i<=m&&j<=n)
+    int i=begin,j=mid+1,pos=begin;
+    while(i<=mid && j<=end)
     {
         if(a[i]<=a[j])
-        temp[k++]=a[i++];
+        {
+            b[pos++]=a[i++];
+        }
         else
         {
-            temp[k++]=a[j++];
-            sum+=(s-i+first);
+            b[pos++]=a[j++];
+            sum+=mid-i+1;
         }
     }
-    while(i<=m)
-    temp[k++]=a[i++];
-    while(j<=n)
-    temp[k++]=a[j++];
-    for(i=0;i<k;i++)
-     a[first+i]=temp[i];
+    while(i<=mid) b[pos++]=a[i++];
+    while(j<=end) b[pos++]=a[j++];
+    for(int i=begin,j=begin;i<=end;i++,j++)
+        a[i]=b[j];
 }
-void sort(int a[],int first,int last)
+void Sort(int begin,int end)
 {
-    int mid;
-    if(first<last)
+    if(begin<end)
     {
-         mid=(first+last)/2;
-         sort(a,first,mid);
-         sort(a,mid+1,last);
-         mergearray(a,first,mid,last,temp);
+        int mid=(begin+end)/2;
+        Sort(begin,mid);
+        Sort(mid+1,end);
+        Merge(begin,mid,end);
     }
-}
-int main()
-{
-   int t,n,i;
-   scanf("%d",&t);
-   while(t--)
-   {
-       sum=0;
-       scanf("%d",&n);
-       for(i=0;i<n;i++)
-       scanf("%d",&a[i]);
-       sort(a,0,n-1);
-       printf("%lld\n",sum);
-   }
-    return 0;
-}
-*/
-
-
-#include <stdio.h>
-#include <algorithm>
-#include <string.h>
-#define MAXN 1000001
-//#define lowbit(x) x&(-x)
-using namespace std;
-long long c[MAXN],a[MAXN];
-struct node
-{
-    int x;
-    int id;
-}Ai[MAXN];
-int lowbit(int x)
-{
-    return x&(-x);
-}
-bool cmp(node n,node m)
-{
-    if(n.x!=m.x)
-        return n.x<m.x;
-    else
-        return n.id<m.id;
-}
-void add(int x)
-{
-    while(x<MAXN)
-    {
-        c[x]+=1;
-        x+=lowbit(x);
-    }
-}
-int Sum(int x)
-{
-    int temp=0;
-    while(x>0)
-    {
-        temp+=c[x];
-        x-=lowbit(x);
-    }
-    return temp;
 }
 int main()
 {
@@ -99,94 +41,12 @@ int main()
     scanf("%d",&t);
     while(t--)
     {
-        long long sum=0;
-        memset(c,0,sizeof(c));
+        sum=0;
         scanf("%d",&n);
-        for(int i=0;i<n;i++)
-           {
-               scanf("%lld",Ai[i].x);
-                  Ai[i].id=i;
-           }
-           sort(Ai,Ai+n,cmp);
-        for(int i=0;i<n;i++)
-            a[Ai[i].id]=i;
-        for(int i=0;i<n;i++)
-        {
-            add(a[i]);
-            sum+=(i-Sum(a[i]));
-        }
+        for(int i=1;i<=n;i++)
+            scanf("%d",&a[i]);
+            Sort(1,n);
         printf("%lld\n",sum);
     }
     return 0;
 }
-
-
-
-
-/*#include<stdio.h>
-#include<string.h>
-#include<algorithm>
-#define N 1000000
-long long c[N+1],aaa[N+1];
-struct sb
-{
-	int x;
-	int y;
-}yi[N+1];
-bool cmp(struct sb t1,struct sb t2)
-{
-    if(t1.x!=t2.x)
-	   return t1.x<t2.x;
-    else
-       return t1.y<t2.y;
-}
-int lowbit (int a)
-{
-	return a&(-a);
-}
-void add(int a)
-{
-	while(a<N+1)
-	{
-		c[a]+=1;
-		a+=lowbit(a);
-	}
-}
-int Sum(int a)
-{
-	int SUM=0;
-	while(a>0)
-	{
-		SUM+=c[a];
-		a-=lowbit(a);
-	}
-	return SUM;
-}
-int main()
-{
-	int a,b,n,m;
-	scanf("%d",&n);
-	while(n--)
-	{
-		long long sum=0;
-		memset(c,0,sizeof(c));
-		scanf("%d",&m);
-		for(a=1;a<=m;a++)
-		{
-			scanf("%lld",&yi[a].x);
-			yi[a].y=a;
-		}
-        std::sort(yi+1,yi+m+1,cmp);//ÀëÉ¢»¯¡£¡£¡£
-		for(a=1;a<=m;a++)
-			aaa[yi[a].y]=a;
-		for(a=1;a<=m;a++)
-		{
-		    add(aaa[a]);
-			sum+=(a-1-Sum(aaa[a]-1));
-
-		}
-		printf("%lld\n",sum);
-
-	}
-}
-*/
