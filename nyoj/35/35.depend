@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1397371086 source:d:\35\main.cpp
-	<string.h>
-	<stdlib.h>
-	<cstdio>
-	<cstring>
-

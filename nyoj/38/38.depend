@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1406637542 source:d:\project\nyoj\38\main.cpp
-	<string.h>
-	<algorithm>
-	<cstdio>
-	<cstring>
-	<algorithm>
-

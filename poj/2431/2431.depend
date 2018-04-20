@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1408274203 source:d:\project\poj\2431\main.cpp
-	<cstdio>
-	<cstring>
-	<queue>
-	<algorithm>
-
