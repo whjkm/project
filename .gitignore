@@ -9,6 +9,8 @@ public/
 .metadata*/
 bin/
 obj/
+bin
+obj
 
 # Compiled Object files
 *.slo
