@@ -3,6 +3,7 @@
 > 有一些比较好玩的代码
 > 有一些数据结构和算法的代码
 > 以后还会继续添加代码
+
 ## hdu oj
 |  #  | Title   |  Solution  | Tag |  Note  | 
 |-----|-------- | ---------- | --- | -------|
@@ -55,6 +56,38 @@
 |79 |[拦截导弹][115]|[c++][116]|动态规划|[CSDN][117]|
 |17 |[单调递增最长子序列][118]|[c++][119]|动态规划|[CSDN][120]|
 |36 |[最长公共子序列][121]|[c++][122]|动态规划|[CSDN][123]|
+|115 |[城市平乱][124]|[c++][125]|最短路径|[CSDN][126]|
+|68 |[三点顺序][127]|[c++][128]|几何|[CSDN][129]|
+|19 |[擅长排列的小明][130]|[c++][131]|DFS|[CSDN][132]|
+|5 |[Binary String Matching][133]|[c++][134]|KMP|[CSDN][135]|
+|139 |[我排第几个][136]|[c++][137]|数论|[CSDN][138]|
+|207 |[食物链][139]|[c++][140]|并查集|[CSDN][141]|
+|303 |[序号互换][142]|[c++][143]|字符串|[CSDN][144]|
+|230 |[彩色棒][145]|[c++][146]|并查集|[CSDN][147]|
+|42  |[一笔画问题][148]|[c++][149]|并查集|[CSDN][150]|
+|290 |[动物统计加强版][151]|[c++][152]|字典树|[CSDN][153]|
+|26  |[孪生素数问题][154]|[c++][155]|数论|[CSDN][156]|
+|488 |[素数环][157]|[c++][158]|回溯|[CSDN][159]|
+
+## FZU OJ
+|  #  | Title   |  Solution  | Tag |  Note  | 
+|-----|-------- | ---------- | --- | -------|
+|2140 |[Forever 0.5][160]|--|几何|[CSDN][161]|
+|2111 |[Min Number][162] |[c++][163]|贪心|[CSDN][164]|
+|2110 |[Star][165] |[c++][166]|几何|[CSDN][167]|
+
+## CSU OJ
+|  #  | Title   |  Solution  | Tag |  Note  | 
+|-----|-------- | ---------- | --- | -------|
+|1334 |[好老师][168]|[c++][169]|模拟|[CSDN][170]|
+|1337 |[搞笑版费马大定理][171]|[c++][172]|模拟|[CSDN][173]|
+|1115 |[最短的名字][174]|[c++][175]|字典树|[CSDN][176]|
+|1111 |[三家人][177]|[c++][178]|--|[CSDN][179]|
+|1120 |[病毒][180]|[c++][181]|动态规划|[CSDN][182]|
+|1112 |[机器人的指令][183]|[c++][184]|模拟|[CSDN][185]|
+|1550 |[Simple String][186]|[c++][187]|字符串|[CSDN][188]|
+|1511 |[残缺的棋盘][189]|[c++][190]|BFS|[CSDN][191]|
+|1505 |[酷酷的单词][192]|[c++][193]|字符串|[CSDN][194]|
 
 
   [1]: http://acm.hdu.edu.cn/showproblem.php?pid=1061
@@ -180,3 +213,74 @@
   [121]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=36
   [122]: ./oj/nyoj/36/main.cpp
   [123]: https://blog.csdn.net/whjkm/article/details/38564077
+  [124]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=115
+  [125]: ./oj/nyoj/115/main.cpp
+  [126]: https://blog.csdn.net/whjkm/article/details/38459733
+  [127]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=68
+  [128]: ./oj/nyoj/68/main.cpp
+  [129]: https://blog.csdn.net/whjkm/article/details/38512047
+  [130]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=19
+  [131]: ./oj/nyoj/19/main.cpp
+  [132]: https://blog.csdn.net/whjkm/article/details/38498317
+  [133]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=5
+  [134]: ./oj/nyoj/5/main.cpp
+  [135]: https://blog.csdn.net/whjkm/article/details/37958985
+  [136]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=139
+  [137]: ./oj/nyoj/139/main.cpp
+  [138]: https://blog.csdn.net/whjkm/article/details/24979435
+  [139]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=207
+  [140]: ./oj/nyoj/207/main.cpp
+  [141]: https://blog.csdn.net/whjkm/article/details/23944971
+  [142]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=303
+  [143]: ./oj/nyoj/303/main.cpp
+  [144]: https://blog.csdn.net/whjkm/article/details/22179305
+  [145]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=230
+  [146]: ./oj/nyoj/230/main.cpp
+  [147]: https://blog.csdn.net/whjkm/article/details/23441019
+  [148]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=42
+  [149]: ./oj/nyoj/42/main.cpp
+  [150]: https://blog.csdn.net/whjkm/article/details/23206171
+  [151]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=290
+  [152]: ./oj/nyoj/290/main.cpp
+  [153]: https://blog.csdn.net/whjkm/article/details/23602249
+  [154]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=26
+  [155]: ./oj/nyoj/26/main.cpp
+  [156]: https://blog.csdn.net/whjkm/article/details/23706567
+  [157]: http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=488
+  [158]: ./oj/nyoj/488/main.cpp
+  [159]: https://blog.csdn.net/whjkm/article/details/24059129
+  [160]: http://acm.fzu.edu.cn/problem.php?pid=2140
+  [161]: https://blog.csdn.net/whjkm/article/details/45937699
+  [162]: http://acm.fzu.edu.cn/problem.php?pid=2111
+  [163]: ./test/2111/main.cpp
+  [164]: https://blog.csdn.net/whjkm/article/details/45937699
+  [165]: http://acm.fzu.edu.cn/problem.php?pid=2110
+  [166]: ./test/2110/main.cpp
+  [167]: https://blog.csdn.net/whjkm/article/details/45897521
+  [168]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1334
+  [169]: ./test/1334/main.cpp
+  [170]: https://blog.csdn.net/whjkm/article/details/40001761
+  [171]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1337
+  [172]: ./test/1337/main.cpp
+  [173]: https://blog.csdn.net/whjkm/article/details/39996557
+  [174]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1115
+  [175]: ./test/1115/main.cpp
+  [176]: https://blog.csdn.net/whjkm/article/details/26622401
+  [177]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1111
+  [178]: ./test/1111/main.cpp
+  [179]: https://blog.csdn.net/whjkm/article/details/26514311
+  [180]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1120
+  [181]: ./test/1120/main.cpp
+  [182]: https://blog.csdn.net/whjkm/article/details/26504515
+  [183]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1112
+  [184]: ./test/1112/main.cpp
+  [185]: https://blog.csdn.net/whjkm/article/details/26476179
+  [186]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1550
+  [187]: ./test/1550/main.cpp
+  [188]: https://blog.csdn.net/whjkm/article/details/45510167
+  [189]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1511
+  [190]: ./test/1511/main.cpp
+  [191]: https://blog.csdn.net/whjkm/article/details/44986067
+  [192]: http://acm.csu.edu.cn/csuoj/problemset/problem?pid=1505
+  [193]: ./test/1505/main.cpp
+  [194]: https://blog.csdn.net/whjkm/article/details/44354485
