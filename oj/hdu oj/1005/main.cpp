@@ -60,11 +60,11 @@ int main()
     {
         Matrix mat;
         mat.x[0][0] = A;
-        mat.x[0][1] = 1;
-        mat.x[1][0] = B;
+        mat.x[0][1] = B;
+        mat.x[1][0] = 1;
         mat.x[1][1] = 0;
-        mat = powmatrix(mat, n-1);
-        printf("%d\n",(mat.x[0][1] + mat.x[1][1])%mod);
+        mat = powmatrix(mat, n-2);
+        printf("%d\n",(mat.x[0][0] + mat.x[0][1])%mod);
     }
     return 0;
 }
